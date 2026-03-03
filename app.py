@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-client = Groq(api_key=os.getenv("API_KEY"))
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 @app.route("/", methods=["GET", "POST"])
 def home():
